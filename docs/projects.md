@@ -1,7 +1,17 @@
-# Projects
-- **Project 1**  
-  
-  Repo: https://github.com/KumarVariable/your-repo
+---
+title: Projects — DevLab
+description: Selected projects, with repos and quick context.
+---
 
-- **Project 2**  
-  Repo: https://github.com/KumarVariable/your-repo
+# Projects
+
+- **DevLabs Site (this hub)**  
+  *GitHub Pages + Jekyll.*  
+  **Repo:** https://github.com/KumarVariable/devlabs  
+  **Live:** {{ site.url }}{{ site.baseurl }}/
+
+<hr />
+<p>
+  <a href="{{ site.baseurl }}/privacy">Privacy Policy</a> ·
+  <a href="{{ site.baseurl }}/terms">Terms of Service</a>
+</p>

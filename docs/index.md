@@ -1,4 +1,15 @@
-# DevLab — Kunal Kumar
-Developer. Java | Typescript | Node | Prompt Engg | AI - LLM
+---
+title: DevLab — Kunal Kumar
+description: Multi-project hub for experiments, mini-apps, and case studies.
+---
 
-[Projects](./projects.md) · [Blog](./blog.md) · [LinkedIn](https://www.linkedin.com/in/yourhandle/) · [Email](mailto:hello@yourdomain)
+# DevLab — Kunal Kumar
+Developer. Java | TypeScript | Node | Prompt Engineering | AI/LLM
+
+[Projects]({{ site.baseurl }}/projects) · [Blog]({{ site.baseurl }}/blog) · [LinkedIn](https://www.linkedin.com/in/yourhandle/) · [Email](mailto:hello@yourdomain)
+
+<hr />
+<p>
+  <a href="{{ site.baseurl }}/privacy">Privacy Policy</a> ·
+  <a href="{{ site.baseurl }}/terms">Terms of Service</a>
+</p>

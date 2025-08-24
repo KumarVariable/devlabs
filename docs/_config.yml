@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
-title: DevLab — Kunal Kumar
+title: DevLabs — Kunal Kumar
+theme: jekyll-theme-cayman
+url: "https://kumarvariable.github.io"
+baseurl: "/devlabs"
 description: Multi-project hub for my experiments and case studies.

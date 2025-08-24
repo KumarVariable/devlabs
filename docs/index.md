@@ -6,7 +6,7 @@ description: Multi-project hub for experiments, mini-apps, and case studies.
 # DevLab — Kunal Kumar
 Developer. Java | TypeScript | Node | Prompt Engineering | AI/LLM
 
-[Projects]({{ site.baseurl }}/projects) · [Blog]({{ site.baseurl }}/blog) · [LinkedIn](https://www.linkedin.com/in/yourhandle/) · [Email](mailto:hello@yourdomain)
+[Projects]({{ site.baseurl }}/projects) · [Blog]({{ site.baseurl }}/blog) · [Contact]({{ site.baseurl }}/contact)
 
 <hr />
 <p>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bito – Code Review Agent (Dev)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Welcome To Code Review Agent</h1>
+    <p class="muted">Landing screen Bitbucket forge app context</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Decoded Context From BitBucket Workspace Screen</h3>
+        <p id="ctxStatus" class="muted">Waiting for <code>?ctx=</code>…</p>
+        <pre id="ctxOut">{}</pre>
+      </div>
+
+      <div class="card">
+        <h3>Logged in User Details</h3>
+        <label for="bitoUser">User ID</label>
+        <input id="bitoUser" type="text" placeholder="e.g. user_123" />
+        <label for="bitoWorkspace" class="mt-10">Workspace ID</label>
+        <input id="bitoWorkspace" type="text" placeholder="e.g. ws_456" />
+        <button id="bbAppBtn" class="btn mt-10">BitBucket App</button>
+        <p class="muted" id="saveNote"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>

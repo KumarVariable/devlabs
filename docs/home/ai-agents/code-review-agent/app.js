@@ -66,8 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const json = JSON.stringify(statePayload);
     const b64 = btoa(encodeURIComponent(json));
 
+    const qs = new URLSearchParams(location.search);
+    const clientKey = qs.get("clientKey") || "";
+
     const CALLBACK_URL = "https://dfdb7d5ac0ee.ngrok-free.app/int/api/v1/oauth/bitbucket/callback";
-    const url = `${CALLBACK_URL}?state=${encodeURIComponent(b64)}`;
+    const url =
+      `${CALLBACK_URL}?state=${encodeURIComponent(b64)}` +
+      (clientKey ? `&clientKey=${encodeURIComponent(clientKey)}` : "");
 
     // persist inputs
     localStorage.setItem("bitoUserId", bitoUserId);

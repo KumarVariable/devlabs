@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const qs = new URLSearchParams(location.search);
     const clientKey = qs.get("clientKey") || "";
 
-    const CALLBACK_URL = "https://dfdb7d5ac0ee.ngrok-free.app/int/api/v1/oauth/bitbucket/callback";
+    const CALLBACK_URL = "https://staging.bito.ai/agent-integration/int/api/v1/oauth/bitbucket/callback";
     const url =
       `${CALLBACK_URL}?state=${encodeURIComponent(b64)}` +
       (clientKey ? `&clientKey=${encodeURIComponent(clientKey)}` : "");

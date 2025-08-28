@@ -46,14 +46,34 @@ function fromBase64Url(b64u) {
   }
 })();
 
-// Button: just persist the inputs for now (no network)
+// Button:
 document.addEventListener("DOMContentLoaded", () => {
   $("bbAppBtn").addEventListener("click", () => {
-    const u = $("bitoUser").value.trim();
-    const w = $("bitoWorkspace").value.trim();
-    localStorage.setItem("bitoUserId", u);
-    localStorage.setItem("bitoWorkspaceId", w);
-    setText("saveNote", "Saved locally.");
-    setTimeout(() => setText("saveNote", ""), 1500);
+    const bitoUserId = ($("bitoUser").value || "").trim();
+    const bitoWorkspaceId = ($("bitoWorkspace").value || "").trim();
+
+    if (!bitoUserId || !bitoWorkspaceId) {
+      setText("saveNote", "Enter both User ID and Workspace ID.");
+      return;
+    }
+
+    const statePayload = {
+      user_id: Number(bitoUserId),
+      workspace_id: Number(bitoWorkspaceId),
+      source: "web-ui"
+    };
+
+    const json = JSON.stringify(statePayload);
+    const b64 = btoa(encodeURIComponent(json));
+
+    const CALLBACK_URL = "https://dfdb7d5ac0ee.ngrok-free.app/int/api/v1/oauth/bitbucket/callback";
+    const url = `${CALLBACK_URL}?state=${encodeURIComponent(b64)}`;
+
+    // persist inputs
+    localStorage.setItem("bitoUserId", bitoUserId);
+    localStorage.setItem("bitoWorkspaceId", bitoWorkspaceId);
+
+    window.location.href = url;
   });
 });
+
